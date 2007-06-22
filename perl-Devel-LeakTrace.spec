@@ -4,7 +4,7 @@
 Summary: Memory debugger for perl
 Name:    perl-%module
 Version: 0.05
-Release: %mkrel 4
+Release: %mkrel 5
 License: GPL or Artistic
 Group:   Development/Perl
 Source:  %module-%version.tar.bz2
