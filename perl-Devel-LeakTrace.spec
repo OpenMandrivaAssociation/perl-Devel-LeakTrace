@@ -1,24 +1,28 @@
-%define module Devel-LeakTrace
-%define fmodule Devel/LeakTrace
+%define upstream_name    Devel-LeakTrace
+%define upstream_version 0.05
 
-Summary: Memory debugger for perl
-Name:    perl-%module
-Version: 0.05
-Release: %mkrel 8
-License: GPL or Artistic
-Group:   Development/Perl
-Source:  %module-%version.tar.bz2
-URL: http://gtk2-perl.sf.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-Module-Build
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Memory debugger for perl
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://gtk2-perl.sf.net/
+Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires: glib-devel 
+BuildRequires: perl-Module-Build
 BuildRequires: perl-devel
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module enables to find memory leaks in perl programs.
 
 %prep
-%setup -q -n %module-%version
+%setup -q -n %{upstream_name}-%{upstream_version}
+
+%build
 perl Makefile.PL INSTALLDIRS=vendor
 #./Build
 %make OPTIMIZE="$RPM_OPT_FLAGS"
@@ -26,17 +30,16 @@ perl Makefile.PL INSTALLDIRS=vendor
 %install
 rm -rf $RPM_BUILD_ROOT
 ./Build install destdir=$RPM_BUILD_ROOT
+
+%check
 #./Build test
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
 %files
 %defattr(-, root, root)
 %doc Changes README 
 %{_mandir}/*/*
-%{perl_vendorarch}/%fmodule.pm
-%{perl_vendorarch}/auto/%fmodule
-
-
+%{perl_vendorarch}/Devel/*
+%{perl_vendorarch}/auto/Devel/*
