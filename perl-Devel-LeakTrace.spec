@@ -14,6 +14,8 @@ Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
 BuildRequires: glib-devel 
 BuildRequires: perl-Module-Build
 BuildRequires: perl-devel
+BuildRequires:  perl(Test)
+BuildRequires:  perl(Test::More)
 
 %description
 This module enables to find memory leaks in perl programs.
