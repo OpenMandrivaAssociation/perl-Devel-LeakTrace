@@ -14,6 +14,7 @@ Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
 BuildRequires: glib-devel 
 BuildRequires: perl-Module-Build
 BuildRequires: perl-devel
+BuildRequires: perl(ExtUtils::CBuilder)
 BuildRequires:  perl(Test)
 BuildRequires:  perl(Test::More)
 
