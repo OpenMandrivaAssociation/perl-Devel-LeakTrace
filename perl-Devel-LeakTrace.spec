@@ -8,7 +8,7 @@ Release:	6
 Summary:    Memory debugger for perl
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        http://gtk2-perl.sf.net/
+Url:        https://gtk2-perl.sf.net/
 Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires: glib-devel 
