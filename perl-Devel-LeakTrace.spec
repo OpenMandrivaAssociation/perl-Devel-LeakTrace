@@ -11,6 +11,7 @@ Group:      Development/Perl
 Url:        https://gtk2-perl.sf.net/
 Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires: glib-devel 
 BuildRequires: perl-Module-Build
 BuildRequires: perl-devel
