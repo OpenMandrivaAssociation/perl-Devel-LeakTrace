@@ -1,15 +1,15 @@
 %define upstream_name    Devel-LeakTrace
-%define upstream_version 0.05
+%define upstream_version 0.06
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	6
+Version:    %{upstream_version}
+Release:	1
 
 Summary:    Memory debugger for perl
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://gtk2-perl.sf.net/
-Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Devel-LeakTrace-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: glib-devel 
