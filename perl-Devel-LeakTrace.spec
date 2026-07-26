@@ -1,15 +1,13 @@
 %define upstream_name    Devel-LeakTrace
-%define upstream_version 0.06
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    0.06
+Release:	2
 
 Summary:    Memory debugger for perl
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://gtk2-perl.sf.net/
-Source0:    https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Devel-LeakTrace-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Devel-LeakTrace-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: glib-devel 
@@ -23,7 +21,7 @@ BuildRequires:  perl(Test::More)
 This module enables to find memory leaks in perl programs.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
