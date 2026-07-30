@@ -2,7 +2,7 @@
 %define upstream_version 0.06
 Name:       perl-%{upstream_name}
 Version:	0.06
-Release:	4
+Release:	5
 
 Summary:    Memory debugger for perl
 License:    GPL+ or Artistic
@@ -35,12 +35,12 @@ perl Makefile.PL INSTALLDIRS=vendor
 %check
 # soft: do not fail package on test failures
 set +e
-#./Build test
+#./Build test || :
 
 
 %files
 %defattr(-, root, root)
-%doc Changes README 
+%doc Changes README
 %{_mandir}/*/*
 %{perl_vendorarch}/Devel/*
 %{perl_vendorarch}/auto/Devel/*
