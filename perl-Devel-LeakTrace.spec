@@ -2,7 +2,7 @@
 %define upstream_version 0.06
 Name:       perl-%{upstream_name}
 Version:	0.06
-Release:	39
+Release:	40
 
 Summary:    Memory debugger for perl
 License:    GPL+ or Artistic
